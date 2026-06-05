@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+
+    #menu-button {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure img {
+        transition: transform .3s ease;
+    }
+
+    figure img:hover {
+        transform: scale(1.05);
+    }
+}
