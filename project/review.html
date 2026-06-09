@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Review</title>
+
+    <link rel="stylesheet" href="styles/site.css">
+
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+
+        <h1>Product Review Hub</h1>
+
+        <button
+            id="menu-button"
+            aria-label="Menu">
+            ☰
+        </button>
+
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Submit Review</a>
+            <a href="references.html">References</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<h2>Submit a Review</h2>
+
+<form>
+
+    <label for="productName">Product Name</label>
+
+    <select id="productName" required>
+        <option value="">Choose a Product</option>
+        <option>Smart Watch</option>
+        <option>Bluetooth Speaker</option>
+        <option>Air Fryer</option>
+    </select>
+
+    <label for="rating">Rating (1-5)</label>
+
+    <input
+        type="number"
+        id="rating"
+        min="1"
+        max="5"
+        required>
+
+    <label for="review">Review</label>
+
+    <textarea
+        id="review"
+        rows="5"
+        required></textarea>
+
+    <button type="submit">
+        Submit Review
+    </button>
+
+</form>
+
+<p id="message"></p>
+
+</main>
+
+<footer>
+    <a href="references.html">References</a>
+
+    <p>&copy; 2026 Marjorie Omojeminiyi</p>
+</footer>
+
+</body>
+</html>

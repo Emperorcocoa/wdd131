@@ -1,0 +1,175 @@
+:root {
+    --purple: #4b003f;
+    --light: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--light);
+}
+
+header {
+    background: var(--purple);
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+#menu-button {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+}
+
+.product-grid,
+#products-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+form {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: .75rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background: var(--purple);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: var(--purple);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    #menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        right: 0;
+
+        width: 220px;
+
+        background: var(--purple);
+
+        flex-direction: column;
+
+        padding: 1rem;
+
+        box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: .75rem;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+    }
+}
